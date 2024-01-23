@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icone.png" type="image/x-icon">
+    <title>Gabriel Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="btn"></div>
+    </header>
+    <div class="principal">
+        <h1>Gabriel Fernando</h1>
+        <p>Graduado no curso técnico com articulação superior em desenvolvimento de sistemas buscando oportunidades para aplicar conhecimentos acadêmicos na área de tecnologia. Motivado a adquirir experiência prática e contribuir de forma positiva para equipes e projetos.</p>
+        <div class="new"></div>
+        <div class="icones">
+            <a href="https://www.instagram.com/gabriel_19cx/"><img class="insta" src="assets/instagramRoxo.png" width="50" data-original-src="assets/instagramRoxo.png"></a>
+            <a href="https://br.linkedin.com/in/gabriel-fernando-vasco-vieira-71b895261"><img class="linke" src="assets/linkedinRoxo.png" width="50" data-original-src="assets/linkedinRoxo.png"></a>
+            <a href="https://github.com/Gabriel-Vieira-19"><img class="git" src="assets/githubRoxo.png" width="50" data-original-src="assets/githubRoxo.png"></a>
+            <a href="https://wa.me/5514996909125"><img class="zap" src="assets/whatsappRoxo.png" width="50" data-original-src="assets/whatsappRoxo.png"></a>
+        </div>
+        <a href="https://mail.google.com/mail/?view=cm&to=gah.19.fvvieira@gmail.com"><button>Entrar em Contato</button></a>
+    </div>
+</body>
+<script>
+    const btn = document.querySelector('.btn');
+    const body = document.querySelector('body');
+    const h1 = document.querySelector('h1');
+    const p = document.querySelector('p');
+    const principal = document.querySelector('.principal');
+    const foto = document.querySelector('.new');
+    const icone1 = document.querySelectorAll('.icones .insta');
+    const icone2 = document.querySelectorAll('.icones .linke');
+    const icone3 = document.querySelectorAll('.icones .git');
+    const icone4 = document.querySelectorAll('.icones .zap');
+    const button = document.querySelector('button');
+
+    btn.onclick = function(){
+        this.classList.toggle('active')
+        body.classList.toggle('active')
+        h1.classList.toggle('active')
+        p.classList.toggle('active')
+        principal.classList.toggle('active')
+        foto.classList.toggle('active')
+        icone1.forEach(img => {
+            img.classList.add('transitioning');
+            setTimeout(() => {
+                img.src = this.classList.contains('active') ? 'assets/instagramAzul.png' : img.getAttribute('data-original-src');
+                img.classList.remove('transitioning');
+            }, 50);
+            
+        });
+        icone2.forEach(img => {
+            img.classList.add('transitioning');
+            setTimeout(() => {
+                img.src = this.classList.contains('active') ? 'assets/linkedinAzul.png' : img.getAttribute('data-original-src');
+                img.classList.remove('transitioning');
+            }, 50);
+            
+        });
+        icone3.forEach(img => {
+            img.classList.add('transitioning');
+            setTimeout(() => {
+                img.src = this.classList.contains('active') ? 'assets/githubAzul.png' : img.getAttribute('data-original-src');
+                img.classList.remove('transitioning');
+            }, 50);
+            
+        });
+        icone4.forEach(img => {
+            img.classList.add('transitioning');
+            setTimeout(() => {
+                img.src = this.classList.contains('active') ? 'assets/whatsappAzul.png' : img.getAttribute('data-original-src');
+                img.classList.remove('transitioning');
+            }, 50);
+            
+        });
+        button.classList.toggle('active')
+            
+    }
+</script>
+</html>

@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Work Sans", sans-serif;
+}
+
+body{
+    background: #130c1b;
+    transition: 1s;
+}
+
+body.active{
+    background: #d4d4d4;
+    transition: 1s;
+}
+
+.btn{
+    width: 130px;
+    height: 60px;
+    border: 2px solid rgb(186, 111, 255);
+    margin-left: 48%;
+    margin-top: 40px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgb(186, 111, 255);
+    border-radius: 50%;
+    top: 9.8%;
+    left: 48.4%;
+    transform: translateY(-90%);
+    transition: left 1.5s;
+}
+
+.btn.active{
+    border: 2px solid #22bfff;
+}
+
+.btn.active::before{
+    left: 52.1%;
+    background: #22bfff;
+}
+
+.principal{
+    width: 1300px;
+    height: 750px;
+    margin-top: 30px;
+    margin-left: 325px;
+    border: 4px solid rgb(186, 111, 255);
+    border-radius: 35px;
+}
+
+.principal.active{
+    border: 4px solid #22bfff;
+    transition: 1s;
+}
+
+h1{
+    color: rgb(186, 111, 255);
+    font-size: 70px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+h1.active{
+    color: #22bfff;
+    transition: 1s;
+}
+
+p{
+    color: #fff;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 600px;
+}
+
+p.active{
+    color: black;
+    transition: 1s;
+}
+
+.new{
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+    margin-left: 750px;
+    margin-top: -200px;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.new::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 200%;
+    background: linear-gradient(180deg, rgba(186,111,255,1), rgba(186,111,255,1));
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.new.active::before{
+    background: linear-gradient(180deg, #22bfff, #22bfff);
+    transition: 1s;
+}
+
+.new::after{
+    content: "";
+    position: absolute;
+    background-image: url(eu.jpeg);
+    background-size: 400px;
+    inset: 5px;
+    border-radius: inherit;
+}
+
+button{
+    background-color: #130c1b;
+    width: 300px;
+    height: 70px;
+    margin-left: 170px;
+    border-radius: 25px;
+    font-size: 23px;
+    color: rgb(186, 111, 255);
+    border: 3px solid rgb(186, 111, 255);
+    font-weight: bold;
+    transition: 1s;
+}
+
+button.active{
+    background-color: #d4d4d4;
+    color: #22bfff;
+    border: 3px solid #22bfff;
+    transition: 1s;
+}
+
+button:hover{
+    background-color: #ba6fff;
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+button:hover.active{
+    background-color: #22bfff;
+    color: black;
+}
+
+.icones{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 800px;
+}
+
+.icones a{
+    margin-left: 20px;
+}
+
+.icones .insta{
+    transition: src 1s ease-in-out;
+}
+
+@media only screen and (max-width: 414px) {
+    body{
+        width: 900px;
+    }
+
+    .btn{
+        margin-left: 42%;
+        border: 3px solid rgb(186, 111, 255);
+    }
+
+    .btn::before{
+        top: 10.4%;
+        left: 94%;
+    }
+
+    .btn.active::before{
+        top: 10.5%;
+        left: 108.5%;
+        border: 3px solid #22bfff;
+    }
+
+    .principal{
+        width: 78%;
+        height: 1200px;
+        margin-left: 10%;
+    }
+
+    .new{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin-left: 40%;
+        margin-top: -800px;
+    }
+
+    .new::after{
+        background-image: url(eu.jpeg);
+        background-size: 400px;
+    }
+
+    h1{
+        margin-top: 600px;
+        margin-left: 60px;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    button{
+        margin-top: 100px;
+        margin-left: 200px;
+        border: 4px solid rgb(186, 111, 255);
+    }
+
+    button.active{
+        border: 4px solid #22bfff;
+    }
+
+    .icones{
+        margin-top: -370px;
+        margin-left: 195px;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    body{
+        width: 900px;
+    }
+
+    .btn{
+        margin-left: 42%;
+        border: 3px solid rgb(186, 111, 255);
+    }
+
+    .btn::before{
+        top: 11%;
+        left: 99%;
+    }
+
+    .btn.active::before{
+        top: 11.2%;
+        left: 115%;
+        border: 3px solid #22bfff;
+    }
+
+    .principal{
+        width: 78%;
+        height: 1200px;
+        margin-left: 10%;
+    }
+
+    .new{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin-left: 40%;
+        margin-top: -800px;
+    }
+
+    .new::after{
+        background-image: url(eu.jpeg);
+        background-size: 400px;
+    }
+
+    h1{
+        margin-top: 600px;
+        margin-left: 60px;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    button{
+        margin-top: 100px;
+        margin-left: 200px;
+        border: 4px solid rgb(186, 111, 255);
+    }
+
+    button.active{
+        border: 4px solid #22bfff;
+    }
+
+    .icones{
+        margin-top: -370px;
+        margin-left: 195px;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    body{
+        width: 900px;
+    }
+
+    .btn{
+        margin-left: 40%;
+        border: 3px solid rgb(186, 111, 255);
+    }
+
+    .btn::before{
+        top: 12.5%;
+        left: 102%;
+    }
+
+    .btn.active::before{
+        top: 12.7%;
+        left: 119%;
+        border: 3px solid #22bfff;
+    }
+
+    .principal{
+        width: 78%;
+        height: 1200px;
+        margin-left: 10%;
+    }
+
+    .new{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin-left: 40%;
+        margin-top: -800px;
+    }
+
+    .new::after{
+        background-image: url(eu.jpeg);
+        background-size: 400px;
+    }
+
+    h1{
+        margin-top: 600px;
+        margin-left: 60px;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    button{
+        margin-top: 100px;
+        margin-left: 200px;
+        border: 4px solid rgb(186, 111, 255);
+    }
+
+    button.active{
+        border: 4px solid #22bfff;
+    }
+
+    .icones{
+        margin-top: -370px;
+        margin-left: 195px;
+        display: flex;
+    }
+}
