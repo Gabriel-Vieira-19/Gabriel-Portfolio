@@ -385,12 +385,12 @@ button:hover.active{
     }
 
     .btn::before{
-        top: 8.4%;
+        top: 10%;
         left: 95%;
     }
 
     .btn.active::before{
-        top: 8.4%;
+        top: 10%;
         left: 109%;
         border: 3px solid #22bfff;
     }
